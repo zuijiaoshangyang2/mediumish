@@ -35,7 +35,8 @@ jobs:
 
       - name: Copy robots.txt to .vuepress/dist/
         run: cp blog/robots.txt blog/.vuepress/dist/robots.txt
-
+      - name: Install Google analytics plugin
+        run: yarn add -D @vuepress/plugin-google-analytics
 
       - name: vuepress-deploy
         uses: jenkey2011/vuepress-deploy@master
