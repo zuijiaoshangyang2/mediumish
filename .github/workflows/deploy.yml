@@ -21,6 +21,7 @@ jobs:
       - name: Move blog/public/ to blog/.vuepress/
         run: mv -f blog/public/ blog/.vuepress/public/
 
+
       - uses: actions/cache@v2
         id: yarn-cache
         with:
@@ -34,6 +35,10 @@ jobs:
 
       - name: Copy robots.txt to .vuepress/dist/
         run: cp blog/robots.txt blog/.vuepress/dist/robots.txt
+
+      - name: Install Plausible plugin
+        run: yarn add vuepress-plugin-plausible
+
 
       - name: vuepress-deploy
         uses: jenkey2011/vuepress-deploy@master
