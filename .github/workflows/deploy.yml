@@ -29,7 +29,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Copy robots.txt to .vuepress/dist/
-        run: cp blog/robots.txt blog/.vuepress/dist/robots.txt
+        run: cp public/robots.txt blog/.vuepress/dist/robots.txt
 
       - name: vuepress-deploy
         uses: jenkey2011/vuepress-deploy@master
