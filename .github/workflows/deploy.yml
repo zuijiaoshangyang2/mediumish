@@ -28,8 +28,12 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+     
+      - name: Create .vuepress/dist/ directory
+        run: mkdir -p blog/.vuepress/dist/
+
       - name: Copy robots.txt to .vuepress/dist/
-        run: cp blog/public/robots.txt blog/.vuepress/dist/robots.txt
+        run: cp blog/robots.txt blog/.vuepress/dist/robots.txt
 
       - name: vuepress-deploy
         uses: jenkey2011/vuepress-deploy@master
