@@ -36,9 +36,6 @@ jobs:
       - name: Copy robots.txt to .vuepress/dist/
         run: cp blog/robots.txt blog/.vuepress/dist/robots.txt
 
-      - name: Install Plausible plugin
-        run: yarn add vuepress-plugin-plausible
-
 
       - name: vuepress-deploy
         uses: jenkey2011/vuepress-deploy@master
