@@ -39,6 +39,10 @@ jobs:
         run: yarn add -D @vuepress/plugin-google-analytics
       - name: Add vue-script2 and vue-google-adsense
         run: yarn add vue-script2 vue-google-adsense
+      - name: Add vuepress-plugin-code-copy
+        run: yarn add -D vuepress-plugin-copy-code1
+
+
       - name: vuepress-deploy
         uses: jenkey2011/vuepress-deploy@master
         env:
